@@ -1,0 +1,261 @@
+* {
+    margin: auto;
+    padding: 0;
+}
+
+.body {
+    font-family: 'DM Serif Text';
+    color: #e1dcd9;
+    min-height: 75rem;
+    padding-top: 4.5rem;
+}
+
+.container {
+    width: 100%;
+}
+
+
+
+/*-------Navbar------*/
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    background-color:#8f6e64;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 1%;
+    transition: left .8s cubic-bezier(1,0,0,1);
+}
+
+.navbar:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=100);
+}
+
+.change {
+    left: 0;
+}
+
+.hamburger-menu {
+    width: 49px;
+    height: 44px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition: all 0.8s;
+}
+
+.change .line-1 {
+    transform: rotateZ(-405deg) translate(-11px,9px);
+}
+.change .line-2 {
+    opacity: 0;
+}
+
+.change .line-3 {
+    transform: rotateZ(405deg) translate(-11px,-9px);
+}
+
+.nav-list {
+    text-align: center;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 60px;
+    color:white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-family: "DM Serif Text";
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color:#e1dcd9;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.nav-link::after {
+    bottom: 0;
+    transform-origin: right;
+
+}
+
+.nav-link::before {
+    top: 0;
+    transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/*-------Icon bar------*/
+
+.icon-bar {
+    position: fixed;
+    top: 20%;
+    left: 95%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index:-1;
+    
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    transition: all 0.3s ease;
+    color: black;
+    font-size: 20px;
+}
+
+.icon-bar a:hover {
+    background-color: transparent;
+    color: white;
+}
+
+
+/*-------Logo------*/
+
+.logo {
+    position: fixed;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index:-1;
+}
+
+
+/*-------Content 01------*/
+
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+
+.Header {
+    color:#8f6e64;
+    font-size: 10vw;
+    position: absolute;
+    font-family: "DM Serif Display";
+    top: 150%;
+    left: 26%;
+    transform: translate(-50%,-50%);
+    z-index:-1;
+}
+
+.img01 {
+    position: absolute;
+    z-index:-2;
+}
+
+/*-------Content 02------*/
+
+.img02 {
+    position: absolute;
+    z-index:-1;
+    top: 80%;
+}
+
+/*-------Content 03------*/
+
+.img03 {
+    position: absolute;
+    top: 1700px;
+    left: 0px;
+    z-index:-2;
+}
+
+.Header02 {
+    color:white;
+    font-size: 5vw;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 260%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index:-1;
+}
+
+/*-------Content 04------*/
+
+.img04 {
+    position: absolute;
+    top: 2400px;
+    left: 0px;
+    z-index:-1;
+}
+
+.Header03 {
+    color:#8f6e64;
+    font-size: 4vw;
+    position: absolute;
+    top: 360%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    z-index:-1;
+}
+
+.description {
+    color:#32363c ;
+    font-size: 2vw;
+    position: absolute;
+    top: 390%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    z-index:-1;
+}
+
+.btn {
+    border: 2px solid #8f6e64;
+    color: #8f6e64;
+    width: 374px;
+    height: 112px;
+    font-size: 30px;
+    position: absolute;
+    top: 410%;
+    left: 67%;
+    transform: translate(-50%,-50%);
+}
+
+.btn:hover {
+    color: white;
+    background-color: #8f6e64;
+}
